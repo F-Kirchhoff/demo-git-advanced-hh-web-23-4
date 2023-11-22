@@ -1,9 +1,8 @@
-async function fetchData() {
-  const url = `https://reqres.in/api/users`;
+async function fetchData(page) {
+  const url = `https://reqres.in/api/users?page=${page}`;
 
   try {
     const response = await fetch(url);
-    console.log(response);
     const data = await response.json();
     console.log(data);
   } catch (error) {
@@ -11,4 +10,9 @@ async function fetchData() {
   }
 }
 
-fetchData();
+async function run() {
+  await fetchData(1);
+  await fetchData(2);
+}
+
+run();
