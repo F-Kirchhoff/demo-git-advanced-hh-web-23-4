@@ -10,5 +10,9 @@ async function fetchData(page) {
   }
 }
 
-fetchData(1);
-fetchData(2);
+async function run() {
+  await fetchData(1);
+  await fetchData(2);
+}
+
+run();
