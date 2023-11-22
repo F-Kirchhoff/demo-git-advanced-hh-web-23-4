@@ -1,5 +1,5 @@
 async function fetchData(page) {
-  const url = `https://reqres.in/api/user?page=${page}`;
+  const url = `https://reqres.in/api/users?page=${page}`;
 
   try {
     const response = await fetch(url);
